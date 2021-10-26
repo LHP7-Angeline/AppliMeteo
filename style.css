@@ -1,0 +1,58 @@
+body{
+    background-image: url(img/cloud2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+}
+
+.weather, .favor{
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
+}
+
+.lh{
+    color: white;
+}
+
+.weatherday:hover{
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.iconify{
+    font-size: 6.5rem;
+}
+
+.hours{
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+}
+
+.fonthour{
+    font-size: 0.8rem;
+}
+
+.iconhours{
+    font-size: 4rem;
+}
+
+.temp{
+    font-size: 0.8rem;
+}
+
+.minmax{
+    font-size: 0.8rem;
+}
+
+@media screen and (max-width:500px) {
+    .weather{
+        background-color: transparent;
+    }
+    .lh{
+        font-size: 3rem;
+        color: black;
+    }
+    .conthours{
+        order: 2;
+    }
+}
