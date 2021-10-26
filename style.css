@@ -5,6 +5,14 @@ body{
     font-family: 'Roboto', sans-serif;
 }
 
+.test {
+    background-color: rgba(165, 203, 215);
+}
+
+.test1 {
+    background-color: rgba(165, 203, 215, 0.55);
+}
+
 .weather, .favor{
     background-color: rgb(255, 255, 255, 0.4);
     border-radius: 0.5rem;
@@ -47,12 +55,31 @@ body{
 @media screen and (max-width:500px) {
     .weather{
         background-color: transparent;
+        margin-top: 1rem;
     }
     .lh{
         font-size: 3rem;
         color: black;
     }
-    .conthours{
+    .monday{
+        order: 1;
+    }
+    .hours{
         order: 2;
+    }
+    .tuesday{
+        order: 3;
+    }
+    .wednesday{
+        order: 4;
+    }
+    .iconify{
+        font-size: 2rem;
+    }
+    .day{
+        font-size: 1rem;
+    }
+    .mondayicon{
+        font-size: 5rem;
     }
 }
