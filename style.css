@@ -3,6 +3,17 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
     font-family: 'Roboto', sans-serif;
+    height: 100vh;
+}
+
+/* STYLE CSS PAGE NEW-YORK */
+
+.NY{
+    background-image: url(img/moon.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
 }
 
 .test {
@@ -50,6 +61,17 @@ body{
 
 .minmax{
     font-size: 0.8rem;
+}
+
+.linkcity{
+    text-decoration: none;
+    color: black;
+}
+
+.linkcity:hover{
+    background-color: rgb(0, 0, 0, 0.2);
+    border-radius: 0.5rem;
+    color: black;
 }
 
 @media screen and (max-width:500px) {

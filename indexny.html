@@ -14,7 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="NY">
     <!-- HEADER -->
 
 
@@ -64,7 +64,7 @@
 
             </div>
 
-          
+
             <div class="text-sm-start  row justify-content-center ">
                 <form class="col-6">
                     Previsions météo sur
@@ -86,12 +86,12 @@
                 </form>
             </div>
         </div>
-     
+
     </header>
-    
+
     <div class="container d-none d-lg-block ps-0">
-        <p class="m-0">Résultats de votre recherche :</p>
-        <p class="text-white">France > Normandie > Le Havre</p>
+        <p class="m-0 text-white">Résultats de votre recherche :</p>
+        <p class="text-white">Etat-Unis > New-York> New-York City</p>
     </div>
 
     <!-- Container avec météo et favoris -->
@@ -100,7 +100,7 @@
 
             <!-- Affichage du lieu -->
             <div class="col-12 col-lg-8 weather">
-                <p class="h2 text-center mb-4 mt-3 lh">Le Havre</p>
+                <p class="h2 text-center mb-4 mt-3 lh">New-York City</p>
 
                 <!-- Affichage des 3 jours -->
                 <div class="container">
@@ -111,19 +111,23 @@
                             <p class="fs-5 text-secondary mb-0">Aujourd'hui</p>
                             <span class="iconify mondayicon" data-icon="fluent:weather-drizzle-20-filled"></span>
                             <div class="row justify-content-evenly mt-3">
-                                <p class="col minmax">Max. <strong>12°</strong></p>
-                                <p class="col minmax">Min. <strong>5°</strong></p>
+                                <p class="col minmax">Max. <strong>16°</strong></p>
+                                <p class="col minmax">Min. <strong>11°</strong></p>
                             </div>
                         </div>
                         <!--Meteo mardi-->
                         <div class="col-10 col-lg-3 weatherday tuesday mb-lg-2">
-                            <div class="d-flex flex-lg-column justify-content-around">    
+                            <div class="d-flex flex-lg-column justify-content-around">
                                 <p class="h3 mt-2 day">Mardi</p>
                                 <p class="d-none d-lg-block fs-5 text-secondary mb-0">26 Oct.</p>
-                                <div><span class="iconify" data-icon="fluent:weather-partly-cloudy-day-16-filled"></span></div>
+                                <div>
+                                    <span class="iconify" data-icon="fluent:weather-thunderstorm-20-filled" style="color: black;"></span>
+                                </div>
                                 <div class="row mt-lg-3">
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Max. </span><strong>16°</strong></p>
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Min. </span><strong>7°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Max.
+                                        </span><strong>17°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Min.
+                                        </span><strong>11°</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -132,10 +136,14 @@
                             <div class="d-flex flex-lg-column justify-content-around">
                                 <p class="h3 mt-2 day">Mercredi</p>
                                 <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div><span class="iconify" data-icon="fluent:weather-sunny-20-filled"></span></div>
+                                <div>
+                                    <span class="iconify" data-icon="fluent:weather-partly-cloudy-night-48-filled" style="color: black;"></span>
+                                </div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0">
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Max. </span><strong>18°</strong></p>
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Min. </span><strong>10°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Max.
+                                        </span><strong>18°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Min.
+                                        </span><strong>10°</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -144,10 +152,13 @@
                             <div class="d-flex flex-lg-column justify-content-around">
                                 <p class="h3 mt-2 day">Jeudi</p>
                                 <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div><span class="iconify iconhours" data-icon="fluent:weather-rain-showers-day-20-filled"></span></div>
+                                <div><span class="iconify iconhours"
+                                        data-icon="fluent:weather-rain-showers-day-20-filled"></span></div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0">
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Max. </span><strong>9°</strong></p>
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Min. </span><strong>5°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Max.
+                                        </span><strong>9°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Min.
+                                        </span><strong>5°</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -156,10 +167,13 @@
                             <div class="d-flex flex-lg-column justify-content-around">
                                 <p class="h3 mt-2 day">Vendredi</p>
                                 <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div><span class="iconify" data-icon="fluent:weather-thunderstorm-20-filled"></span></div>
+                                <div><span class="iconify" data-icon="fluent:weather-thunderstorm-20-filled"></span>
+                                </div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0">
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Max. </span><strong>11°</strong></p>
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Min. </span><strong>8°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Max.
+                                        </span><strong>11°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Min.
+                                        </span><strong>8°</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -168,10 +182,14 @@
                             <div class="d-flex flex-lg-column justify-content-around">
                                 <p class="h3 mt-2 day">Samedi</p>
                                 <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div><span class="iconify" data-icon="fluent:weather-sunny-20-filled"></span></div>
+                                <div>
+                                    <span class="iconify" data-icon="fluent:weather-thunderstorm-20-filled">
+                                </div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0">
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Max. </span><strong>14°</strong></p>
-                                    <p class="col minmax"><span class="d-none d-lg-inline">Min. </span><strong>6°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Max.
+                                        </span><strong>14°</strong></p>
+                                    <p class="col minmax"><span class="d-none d-lg-inline">Min.
+                                        </span><strong>6°</strong></p>
                                 </div>
                             </div>
                         </div>
@@ -184,24 +202,24 @@
                             <div class="col text-center">
                                 <p class="mt-2 mb-1 fonthour">Maintenant</p>
                                 <span class="iconify iconhours" data-icon="fluent:weather-cloudy-20-filled"></span>
-                                <p class="temp"><strong>10°C</strong></p>
+                                <p class="temp"><strong>13°C</strong></p>
                             </div>
                             <div class="col text-center">
                                 <p class="mt-2 mb-1 fonthour">15h</p>
                                 <span class="iconify iconhours"
                                     data-icon="fluent:weather-rain-showers-day-20-filled"></span>
-                                <p class="temp"><strong>12°C</strong></p>
+                                <p class="temp"><strong>16°C</strong></p>
                             </div>
                             <div class="col text-center">
                                 <p class="mt-2 mb-1 fonthour">19h</p>
-                                <span class="iconify iconhours" data-icon="fluent:weather-rain-20-filled"></span>
-                                <p class="temp"><strong>8°C</strong></p>
+                                <span class="iconify iconhours" data-icon="fluent:weather-cloudy-20-filled" style="color: black;"></span>
+                                <p class="temp"><strong>14°C</strong></p>
                             </div>
                             <div class="col text-center">
                                 <p class="mt-2 mb-1 fonthour">22h</p>
                                 <span class="iconify iconhours"
                                     data-icon="fluent:weather-partly-cloudy-night-20-filled"></span>
-                                <p class="temp"><strong>6°C</strong></p>
+                                <p class="temp"><strong>13°C</strong></p>
                             </div>
                         </div>
 
@@ -212,10 +230,10 @@
 
             <!-- Affichage des favoris -->
             <div class="col-12 col-lg-3 favor d-lg-block d-none">
-                <p class="h2 text-center text-white mt-3 mb-3">Mes favoris</p>
+                <p class="h2 text-center text-white mt-3">Mes favoris</p>
                 <div class="row justify-content-around">
+                    <a href="index.html" class="col-10 linkcity p-3">Ma position</a>
                     <a href="indexParis.html" class="col-10 linkcity p-3">Paris</a>
-                    <a href="indexny.html" class="col-10 linkcity p-3">New-York</a>
                 </div>
             </div>
         </div>
@@ -228,16 +246,14 @@
     </script>
 </body>
 
-<footer class=" ">
+<footer class="">
 
     <!-- NAVBAR MOBIL -->
 
-    
-    <!-- <div class=""> -->
 
 
-<nav class=" container  navbar-expand-lg "></nav>        
-<div class="test1 navbar fixed-bottom row justify-content-around text-center d-sm-none">
+    <nav class=" container  navbar-expand-lg "></nav>
+    <div class="test1 navbar fixed-bottom row justify-content-around text-center d-sm-none">
         <div class=" col-4 d-block d-sm-none ">
             <button type="submit" class="btn btn-base">
 
