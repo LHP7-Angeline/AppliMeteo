@@ -39,7 +39,7 @@ body{
 }
 
 .iconify{
-    font-size: 6.5rem;
+    width: 5rem;
 }
 
 .hours{
@@ -96,7 +96,7 @@ body{
         order: 4;
     }
     .iconify{
-        font-size: 2rem;
+        width: 2.5rem;
     }
     .day{
         font-size: 1rem;

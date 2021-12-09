@@ -45,7 +45,7 @@
                                     </div>
 
                                     <div class="col-lg-1 col-md-3 col-sm-12 p-0">
-                                        <button type="submit" class="btn btn-base">
+                                        <button id="searchCity" type="button" class="btn btn-base">
 
                                             <img src="https://cdn.discordapp.com/attachments/895304256142344212/902488809214722068/loupe.png"
                                                 alt="loupe" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -63,35 +63,13 @@
                 </div>
 
             </div>
-
-          
-            <div class="text-sm-start  row justify-content-center ">
-                <form class="col-6">
-                    Previsions météo sur
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
-                            value="option1">
-                        <label class="form-check-label" for="inlineRadio1">1</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
-                            value="option2">
-                        <label class="form-check-label" for="inlineRadio2">2</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
-                            value="option3">
-                        <label class="form-check-label" for="inlineRadio3">3 jours</label>
-                    </div>
-                </form>
-            </div>
         </div>
      
     </header>
     
     <div class="container d-none d-lg-block ps-0">
         <p class="m-0">Résultats de votre recherche :</p>
-        <p class="text-white">France > Normandie > Le Havre</p>
+        <p id="country" class="text-white"></p>
     </div>
 
     <!-- Container avec météo et favoris -->
@@ -100,108 +78,103 @@
 
             <!-- Affichage du lieu -->
             <div class="col-12 col-lg-8 weather">
-                <p class="h2 text-center mb-4 mt-3 lh">Le Havre</p>
+                <p id="localisation" class="h2 text-center mb-4 mt-3 lh">Le Havre</p>
 
-                <!-- Affichage des 3 jours -->
+                <!-- Affichage des 3 jours pour desktop + 5 jours pour version mobile-->
                 <div class="container">
                     <div class="row gap-4 justify-content-evenly text-center">
-                        <!--Meteo lundi-->
+                        <!--Meteo du jour-->
                         <div class="col-10 col-lg-3 weatherday monday mb-lg-2">
-                            <p class="h3 mt-2">Lundi</p>
+                            <p id="actualDay" class="h3 mt-2"></p>
                             <p class="fs-5 text-secondary mb-0">Aujourd'hui</p>
-                            <span class="iconify mondayicon" data-icon="fluent:weather-drizzle-20-filled"></span>
+                            <div id="iconActualDay"></div>
                             <div class="row justify-content-evenly mt-3">
-                                <p class="col minmax">Max. <strong>12°</strong></p>
-                                <p class="col minmax">Min. <strong>5°</strong></p>
+                                <p id="maxActualDay" class="col minmax"></p>
+                                <p id="minActualDay" class="col minmax"></p>
                             </div>
                         </div>
-                        <!--Meteo mardi-->
+                        <!--Meteo J+1-->
                         <div class="col-10 col-lg-3 weatherday tuesday mb-lg-2">
                             <div class="d-flex flex-lg-column justify-content-around colphone">    
-                                <p class="h3 mt-2 day colphone">Mardi</p>
-                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">26 Oct.</p>
-                                <div class="colphone"><span class="iconify text-center" data-icon="fluent:weather-partly-cloudy-day-16-filled"></span></div>
+                                <p id="dayJ1" class="h3 mt-2 day colphone"></p>
+                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">Demain</p>
+                                <div id="iconJ1" class="colphone"></div>
                                 <div class="row mt-lg-3 colphone align-items-center">
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Max. </span><strong>16°</strong></p>
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Min. </span><strong>7°</strong></p>
+                                    <p id="maxJ1" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
+                                    <p id="minJ1" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
                                 </div>
                             </div>
                         </div>
-                        <!--Meteo mercredi-->
+                        <!--Meteo J+2-->
                         <div class="col-10 col-lg-3 weatherday wednesday mb-lg-2">
                             <div class="d-flex flex-lg-column justify-content-around colphone">
-                                <p class="h3 mt-2 day colphone">Mercredi</p>
-                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div class="colphone"><span class="iconify text-center" data-icon="fluent:weather-sunny-20-filled"></span></div>
+                                <p id="dayJ2" class="h3 mt-2 day colphone"></p>
+                                <p id="dateJ2" class="d-none d-lg-block fs-5 text-secondary mb-0"></p>
+                                <div id="iconJ2" class="colphone"></div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0 colphone align-items-center">
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Max. </span><strong>18°</strong></p>
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Min. </span><strong>10°</strong></p>
+                                    <p id="maxJ2" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
+                                    <p id="minJ2" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
                                 </div>
                             </div>
                         </div>
-                        <!--Meteo jeudi-->
+                        <!--Meteo J+3 mobile-->
                         <div class="col-10 col-lg-3 d-block d-lg-none weatherday wednesday mb-lg-2">
                             <div class="d-flex flex-lg-column justify-content-around colphone">
-                                <p class="h3 mt-2 day colphone">Jeudi</p>
-                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div class="colphone"><span class="iconify" data-icon="fluent:weather-rain-showers-day-20-filled"></span></div>
+                                <p id="dayJ3" class="h3 mt-2 day colphone"></p>
+                                <div id="iconJ3" class="colphone"></div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0 colphone align-items-center">
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Max. </span><strong>9°</strong></p>
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Min. </span><strong>5°</strong></p>
+                                    <p id="tempJ3" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
+                                    <p class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
                                 </div>
                             </div>
                         </div>
-                        <!--Meteo vendredi-->
+                        <!--Meteo J+4 mobile-->
                         <div class="col-10 col-lg-3 d-block d-lg-none weatherday wednesday mb-lg-2">
                             <div class="d-flex flex-lg-column justify-content-around colphone">
-                                <p class="h3 mt-2 day colphone">Vendredi</p>
-                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div class="colphone"><span class="iconify" data-icon="fluent:weather-thunderstorm-20-filled"></span></div>
+                                <p id="dayJ4" class="h3 mt-2 day colphone"></p>
+                                <div id="iconJ4" class="colphone"></div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0 colphone align-items-center">
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Max. </span><strong>11°</strong></p>
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Min. </span><strong>8°</strong></p>
+                                    <p id="tempJ4" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
+                                    <p class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
                                 </div>
                             </div>
                         </div>
-                        <!--Meteo samedi-->
+                        <!--Meteo J+5 mobile-->
                         <div class="col-10 col-lg-3 d-block d-lg-none weatherday wednesday mb-lg-2">
                             <div class="d-flex flex-lg-column justify-content-around colphone">
-                                <p class="h3 mt-2 day colphone">Samedi</p>
-                                <p class="d-none d-lg-block fs-5 text-secondary mb-0">27 Oct.</p>
-                                <div class="colphone"><span class="iconify" data-icon="fluent:weather-sunny-20-filled"></span></div>
+                                <p id="dayJ5" class="h3 mt-2 day colphone"></p>
+                                <div id="iconJ5" class="colphone"></div>
                                 <div class="row justify-content-evenly mt-0 mt-lg-3 mb-0 colphone align-items-center">
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Max. </span><strong>14°</strong></p>
-                                    <p class="col minmax m-0"><span class="d-none d-lg-inline">Min. </span><strong>6°</strong></p>
+                                    <p id="tempJ5" class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
+                                    <p class="col minmax m-0"><span class="d-none d-lg-inline"></span></p>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Affichage par heure -->
                         <div class="col-12 text-start">
-                            <p class="mt-4 d-none d-lg-block">Météo journalière du 25 Octobre 2021</p>
+                            <p id="dateWeather" class="mt-4 d-none d-lg-block"></p>
                         </div>
                         <div class="row justify-content-center pb-1 pt-1 mb-lg-4 hours">
                             <div class="col text-center">
-                                <p class="mt-2 mb-1 fonthour">Maintenant</p>
-                                <span class="iconify iconhours" data-icon="fluent:weather-cloudy-20-filled"></span>
-                                <p class="temp"><strong>10°C</strong></p>
+                                <p id="hourOne" class="mt-2 mb-1 fonthour"></p>
+                                <div id="iconTwelve"></div>
+                                <p id="tempTwelve" class="temp"></p>
                             </div>
                             <div class="col text-center">
-                                <p class="mt-2 mb-1 fonthour">15h</p>
-                                <span class="iconify iconhours"
-                                    data-icon="fluent:weather-rain-showers-day-20-filled"></span>
-                                <p class="temp"><strong>12°C</strong></p>
+                                <p id="hourTwo" class="mt-2 mb-1 fonthour"></p>
+                                <div id="iconThreePM"></div>
+                                <p id="tempThreePM" class="temp"></p>
                             </div>
                             <div class="col text-center">
-                                <p class="mt-2 mb-1 fonthour">19h</p>
-                                <span class="iconify iconhours" data-icon="fluent:weather-rain-20-filled"></span>
-                                <p class="temp"><strong>8°C</strong></p>
+                                <p id="hourThree" class="mt-2 mb-1 fonthour"></p>
+                                <div id="iconSixPM"></div>
+                                <p id="tempSixPM" class="temp"></p>
                             </div>
                             <div class="col text-center">
-                                <p class="mt-2 mb-1 fonthour">22h</p>
-                                <span class="iconify iconhours"
-                                    data-icon="fluent:weather-partly-cloudy-night-20-filled"></span>
-                                <p class="temp"><strong>6°C</strong></p>
+                                <p id="hourFour" class="mt-2 mb-1 fonthour"></p>
+                                <div id="iconNinePM"></div>
+                                <p id="tempNinePM" class="temp"></p>
                             </div>
                         </div>
 
@@ -214,8 +187,8 @@
             <div class="col-12 col-lg-3 favor d-lg-block d-none">
                 <p class="h2 text-center text-white mt-3 mb-3">Mes favoris</p>
                 <div class="row justify-content-around">
-                    <a href="indexParis.html" class="col-10 linkcity p-3">Paris</a>
-                    <a href="indexny.html" class="col-10 linkcity p-3">New-York</a>
+                    <a href="#" class="col-10 linkcity p-3">Paris</a>
+                    <a href="#" class="col-10 linkcity p-3">New-York</a>
                 </div>
             </div>
         </div>
@@ -226,6 +199,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
+    <script src="script.js"></script>
 </body>
 
 <footer class=" ">
